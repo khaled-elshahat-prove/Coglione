@@ -1,0 +1,11 @@
+
+
+<div *ngIf="det" >
+    <div *ngFor="let k of det.abilities">
+        <p>Abilities: {{k.ability.name}}</p>
+    </div>
+    Name: {{det.forms[0].name}}<br>
+    Height: {{det.height}}
+    
+    <p><a href (click)="back()">Back</a></p>
+</div>

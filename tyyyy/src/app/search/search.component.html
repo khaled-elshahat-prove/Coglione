@@ -1,0 +1,16 @@
+<div>
+    <p>
+      <label class="txt">Product Name:</label><br>
+      <input class="form-control input" type="text" #query><br>
+      <button class="btn btn-primary" (click)="submit(query)">Search</button>
+    </p>
+
+    <div *ngIf="results">
+        <div *ngFor="let t of results.pokemon">
+            SLOT: {{t.slot}}<br>
+            NAME: <a [routerLink]="['/item-pokemon', t.pokemon.name]">{{t.pokemon.name}}</a><br>
+            URL: {{t.pokemon.url}}
+            <hr>
+        </div>
+    </div>
+</div>
